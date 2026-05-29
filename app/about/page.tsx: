@@ -1,0 +1,49 @@
+export default function AboutPage() {
+  return (
+    <main style={{minHeight: '100vh', background: 'linear-gradient(145deg, #050208 0%, #0d0618 30%, #120a00 60%, #050208 100%)', color: '#f5e6c8', fontFamily: 'Georgia, serif', position: 'relative', overflow: 'hidden'}}>
+      <div style={{position: 'fixed', top: '-20%', left: '-10%', width: 500, height: 500, borderRadius: '50%', background: 'radial-gradient(circle, rgba(180,83,9,0.15) 0%, transparent 70%)', pointerEvents: 'none'}} />
+
+      <nav style={{background: 'rgba(10,5,0,0.85)', backdropFilter: 'blur(20px)', borderBottom: '1px solid rgba(245,158,11,0.3)', padding: '18px 32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'sticky', top: 0, zIndex: 100}}>
+        <a href="/" style={{background: 'linear-gradient(90deg, #fbbf24, #f59e0b, #d97706)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontSize: 22, fontWeight: 'bold', letterSpacing: 1, textDecoration: 'none'}}>OM San Sanatana Tamil</a>
+        <div style={{display: 'flex', gap: 20}}>
+          <a href="/deities" style={{color: 'rgba(252,211,77,0.7)', fontSize: 14, textDecoration: 'none'}}>Dewa-Dewi</a>
+          <a href="/festivals" style={{color: 'rgba(252,211,77,0.7)', fontSize: 14, textDecoration: 'none'}}>Festival</a>
+          <a href="/prayer" style={{color: 'rgba(252,211,77,0.7)', fontSize: 14, textDecoration: 'none'}}>Doa</a>
+          <a href="/scriptures" style={{color: 'rgba(252,211,77,0.7)', fontSize: 14, textDecoration: 'none'}}>Kitab</a>
+          <a href="/community" style={{color: 'rgba(252,211,77,0.7)', fontSize: 14, textDecoration: 'none'}}>Komunitas</a>
+        </div>
+      </nav>
+
+      <div style={{padding: '60px 24px 40px', textAlign: 'center'}}>
+        <h1 style={{fontSize: 'clamp(28px,5vw,48px)', fontWeight: 'bold', background: 'linear-gradient(135deg, #fbbf24, #fde68a, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', marginBottom: 12, letterSpacing: 2}}>Tentang Kami</h1>
+        <p style={{color: 'rgba(156,163,175,0.8)', letterSpacing: 1}}>Misi kami melestarikan dan menyebarkan tradisi Hindu Tamil</p>
+        <div style={{display: 'inline-flex', alignItems: 'center', gap: 16, marginTop: 24}}>
+          <div style={{width: 60, height: 1, background: 'linear-gradient(90deg, transparent, #f59e0b)'}} />
+          <span style={{color: '#f59e0b', fontSize: 16}}>✦</span>
+          <div style={{width: 60, height: 1, background: 'linear-gradient(90deg, #f59e0b, transparent)'}} />
+        </div>
+      </div>
+
+      <div style={{maxWidth: 700, margin: '0 auto', padding: '0 32px 80px'}}>
+        {[
+          { icon: '🕉️', title: 'Visi Kami', desc: 'Menjadi platform spiritual terdepan untuk komunitas Hindu Tamil di seluruh dunia, menghubungkan umat dengan warisan budaya dan tradisi leluhur yang kaya.' },
+          { icon: '🙏', title: 'Misi Kami', desc: 'Menyediakan sumber daya spiritual yang komprehensif — dari doa harian, kalender festival, direktori kuil, hingga perpustakaan kitab suci Tamil.' },
+          { icon: '📖', title: 'Warisan Tamil', desc: 'Tradisi Hindu Tamil memiliki sejarah lebih dari 2000 tahun. Kami berkomitmen melestarikan kearifan Thirukkural, Tevaram, dan kitab suci Tamil lainnya.' },
+          { icon: '🌺', title: 'Komunitas', desc: 'Kami percaya kekuatan ada pada komunitas. Platform ini dibangun untuk menghubungkan umat Hindu Tamil di Indonesia dan seluruh dunia.' },
+        ].map((item, i) => (
+          <div key={i} style={{background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(20px)', border: '1px solid rgba(245,158,11,0.15)', borderRadius: 20, padding: 28, marginBottom: 20, boxShadow: '0 8px 32px rgba(0,0,0,0.4)', display: 'flex', gap: 20, alignItems: 'flex-start'}}>
+            <div style={{fontSize: 40, flexShrink: 0}}>{item.icon}</div>
+            <div>
+              <h2 style={{background: 'linear-gradient(135deg, #fbbf24, #f59e0b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', fontSize: 20, fontWeight: 'bold', marginBottom: 10}}>{item.title}</h2>
+              <p style={{color: 'rgba(209,213,219,0.8)', fontSize: 14, lineHeight: 1.7}}>{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div style={{textAlign: 'center', padding: '20px', borderTop: '1px solid rgba(245,158,11,0.15)', color: 'rgba(120,83,15,0.6)', fontSize: 12, letterSpacing: 2}}>
+        OM நமசிவாய • SAN SANATANA TAMIL OM
+      </div>
+    </main>
+  )
+}
